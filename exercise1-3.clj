@@ -14,6 +14,7 @@
 
 (def square-larger (fn 
 	[n1 n2 n3]
-	(cond (= (max2 n1 n3) (max2 n2 n3)) (sum-of-squares (max2 n1 n2) n3)
-		  (= (max2 n1 n2) (max2 n3 n2)) (sum-of-squares (max2 n1 n3) n2)
-		  :else (sum-of-squares (max n3 n2) n1))))
+	(cond
+		(= (max2 n1 n3) (max2 n2 n3)) (sum-of-squares (max2 n1 n2) n3)
+		(= (max2 n1 n2) (max2 n3 n2)) (sum-of-squares (max2 n1 n3) n2)
+		:else (sum-of-squares (max n3 n2) n1))))
